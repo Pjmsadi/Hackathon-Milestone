@@ -1,0 +1,213 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FBCBFF, #A0D9FF);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FF76C7, #A0D9FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
+    animation: glowingText 1.5s ease-out infinite alternate;
+}
+
+@keyframes glowingText {
+    0% {
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 2px 2px 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.7);
+    }
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: none;
+    padding: 25px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #F7A8C3, #FBCBFF);
+    border-radius: 15px;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FF6F91;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #FF76C7;
+    border-radius: 12px;
+    background-color: #F2F3F4;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #FF6F91;
+    box-shadow: 0 0 10px rgba(255, 111, 145, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.3rem;
+    background-color: #FF6F91;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #FF4C75;
+    transform: translateY(-3px);
+}
+
+/* Resume Display Section */
+#resume-display {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+#resume-display h2 {
+    color: #FF6F91;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    form {
+        padding: 40px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #resume-display {
+        padding: 40px;
+    }
+}
+
+/* Smaller Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    form {
+        padding: 30px;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    #resume-display {
+        padding: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #resume-display {
+        padding: 25px;
+        margin-top: 20px;
+    }
+}
